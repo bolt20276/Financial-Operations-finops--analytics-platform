@@ -48,7 +48,7 @@ pipeline that:
 
 
 
-│             SILVER LAYER (Delta Lake)                           │
+│             SILVER LAYER                                       │
 
 │   Files/silver/  — 7 tables — Cleaned · Typed · DQ Validated   │
 
