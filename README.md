@@ -17,7 +17,7 @@ pipeline that:
 - Models it into a **star schema** in Fabric Warehouse
 
 ## 🏗️ Architecture
-│                        DATA SOURCES                             │
+│                      DATA SOURCES                             
 
 │                                                                 │
 
@@ -29,25 +29,24 @@ pipeline that:
 
 │   • fx_rates       • vendors                                    │
 
-└────────────────────────┬────────────────────────────────────────┘
 
 │  Incremental Watermark Load
 
 ▼
 
-┌─────────────────────────────────────────────────────────────────┐
+
 
 │                  BRONZE LAYER (Raw Parquet)                     │
 
 │              Files/bronze/  — 7 tables — No transformation      │
 
-└────────────────────────┬────────────────────────────────────────┘
+
 
 │  PySpark DQ Transformation
 
 ▼
 
-┌─────────────────────────────────────────────────────────────────┐
+
 
 │             SILVER LAYER (Delta Lake)                           │
 
@@ -55,13 +54,13 @@ pipeline that:
 
 │   Delta MERGE upsert · DQ logs · Pipeline ledger               │
 
-└────────────────────────┬────────────────────────────────────────┘
+
 
 │  Dataflow Gen2 (Power Query M)
 
 ▼
 
-┌─────────────────────────────────────────────────────────────────┐
+┌
 
 │              GOLD LAYER (Fabric Warehouse)                      │
 
@@ -69,7 +68,7 @@ pipeline that:
 
 │   Star schema optimised for Power BI Direct Lake               │
 
-└────────────────────────┬────────────────────────────────────────┘
+└
 
 │  Direct Lake
 
